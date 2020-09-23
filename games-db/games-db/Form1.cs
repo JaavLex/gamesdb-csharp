@@ -21,10 +21,13 @@ namespace games_db
         {
 
         }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void addbutton_Click(object sender, EventArgs e)
         {
+            game NewGame = new game(gamegrid.RowCount + 1, namebox.Text, platformbox.Text, typebox.Text, datebox.Value, editorbox.Text);
 
+            String[] row = new string[] { NewGame._id.ToString(), NewGame._name, NewGame._platform, NewGame._type, NewGame._gamedate.ToString(), NewGame._editor };
+
+            gamegrid.Rows.Add(row);
         }
     }
 }
