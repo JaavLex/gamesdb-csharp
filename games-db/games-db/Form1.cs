@@ -25,14 +25,21 @@ namespace games_db
         {
             game NewGame = new game(gamegrid.RowCount + 1, namebox.Text, platformbox.Text, typebox.Text, datebox.Value, editorbox.Text);
 
-            String[] row = new string[] { NewGame._id.ToString(), NewGame._name, NewGame._platform, NewGame._type, NewGame._gamedate.ToString(), NewGame._editor };
-
-            gamegrid.Rows.Add(row);
+            gamegrid.Rows.Add(NewGame._id, NewGame._name, NewGame._platform, NewGame._type, NewGame._gamedate, NewGame._editor);
         }
 
         private void typebox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void gamegrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void gamegrid_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace games_db
+﻿using System;
+
+namespace games_db
 {
     partial class Form1
     {
@@ -154,7 +156,9 @@
             this.gamegrid.Size = new System.Drawing.Size(650, 460);
             this.gamegrid.TabIndex = 0;
             this.gamegrid.Text = "dataGridView1";
-            // 
+            this.gamegrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gamegrid_CellContentClick);
+            this.gamegrid.Columns["ID"].ValueType = typeof(int);
+            this.gamegrid.Columns["GameDate"].ValueType = typeof(DateTime);
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
