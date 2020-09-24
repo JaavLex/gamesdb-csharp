@@ -68,6 +68,11 @@
             // platformbox
             // 
             this.platformbox.FormattingEnabled = true;
+            this.platformbox.Items.AddRange(new object[] {
+            "PC",
+            "Xbox",
+            "PS4",
+            "Nintendo Switch"});
             this.platformbox.Location = new System.Drawing.Point(47, 53);
             this.platformbox.Name = "platformbox";
             this.platformbox.Size = new System.Drawing.Size(200, 23);
@@ -76,10 +81,17 @@
             // typebox
             // 
             this.typebox.FormattingEnabled = true;
+            this.typebox.Items.AddRange(new object[] {
+            "FPS",
+            "TPS",
+            "RPG",
+            "MMORPG",
+            "Simulateur"});
             this.typebox.Location = new System.Drawing.Point(47, 82);
             this.typebox.Name = "typebox";
             this.typebox.Size = new System.Drawing.Size(200, 23);
             this.typebox.TabIndex = 4;
+            this.typebox.SelectedIndexChanged += new System.EventHandler(this.typebox_SelectedIndexChanged);
             // 
             // addbutton
             // 
@@ -127,12 +139,6 @@
             this.Editor.Name = "Editor";
             this.Editor.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(918, 496);
-            // 
             // gamegrid
             // 
             this.gamegrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -148,6 +154,12 @@
             this.gamegrid.Size = new System.Drawing.Size(650, 460);
             this.gamegrid.TabIndex = 0;
             this.gamegrid.Text = "dataGridView1";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(918, 496);
             this.Controls.Add(this.addbutton);
             this.Controls.Add(this.typebox);
             this.Controls.Add(this.platformbox);

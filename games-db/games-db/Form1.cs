@@ -29,5 +29,10 @@ namespace games_db
 
             gamegrid.Rows.Add(row);
         }
+
+        private void typebox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
