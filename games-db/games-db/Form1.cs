@@ -23,8 +23,7 @@ namespace games_db
         }
         private void addbutton_Click(object sender, EventArgs e)
         {
-            game NewGame = new game(gamegrid.RowCount + 1, namebox.Text, platformbox.Text, typebox.Text, datebox.Value, editorbox.Text);
-
+            game NewGame = new game(gamegrid.RowCount, namebox.Text, platformbox.Text, typebox.Text, datebox.Value, editorbox.Text);
             gamegrid.Rows.Add(NewGame._id, NewGame._name, NewGame._platform, NewGame._type, NewGame._gamedate, NewGame._editor);
         }
 
@@ -33,13 +32,13 @@ namespace games_db
 
         }
 
-        private void gamegrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void gamegrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
-        }
-
-        private void gamegrid_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        {
+            enamebox.Text = gamegrid.Rows[e.RowIndex].Cells["GName"].FormattedValue.ToString();
+            eplatformbox.Text = gamegrid.Rows[e.RowIndex].Cells["Platform"].FormattedValue.ToString();
+            etypebox.Text = gamegrid.Rows[e.RowIndex].Cells["Type"].FormattedValue.ToString();
+            edatebox.Text = gamegrid.Rows[e.RowIndex].Cells["GameDate"].FormattedValue.ToString();
+            eeditorbox.Text = gamegrid.Rows[e.RowIndex].Cells["Editor"].FormattedValue.ToString();
         }
     }
 }

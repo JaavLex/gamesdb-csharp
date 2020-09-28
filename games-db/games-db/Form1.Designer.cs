@@ -162,7 +162,7 @@ namespace games_db
             this.gamegrid.Size = new System.Drawing.Size(650, 460);
             this.gamegrid.TabIndex = 0;
             this.gamegrid.Text = "dataGridView1";
-            this.gamegrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gamegrid_CellContentClick);
+            this.gamegrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gamegrid_CellClick);
             // 
             // enamebox
             // 
@@ -195,10 +195,11 @@ namespace games_db
             // 
             this.etypebox.FormattingEnabled = true;
             this.etypebox.Items.AddRange(new object[] {
-            "PC",
-            "Xbox",
-            "PS4",
-            "Nintendo Switch"});
+            "FPS",
+            "TPS",
+            "RPG",
+            "MMORPG",
+            "Simulateur"});
             this.etypebox.Location = new System.Drawing.Point(47, 279);
             this.etypebox.Name = "etypebox";
             this.etypebox.Size = new System.Drawing.Size(200, 23);
