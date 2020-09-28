@@ -220,7 +220,7 @@ namespace games_db
             this.editbutton.TabIndex = 5;
             this.editbutton.Text = "Edit";
             this.editbutton.UseVisualStyleBackColor = true;
-            this.editbutton.Click += new System.EventHandler(this.addbutton_Click);
+            this.editbutton.Click += new System.EventHandler(this.editbutton_Click);
             // 
             // Form1
             // 

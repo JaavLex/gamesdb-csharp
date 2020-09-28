@@ -12,6 +12,7 @@ namespace games_db
 {
     public partial class Form1 : Form
     {
+        int index = 0;
         public Form1()
         {
             InitializeComponent();
@@ -39,6 +40,11 @@ namespace games_db
             etypebox.Text = gamegrid.Rows[e.RowIndex].Cells["Type"].FormattedValue.ToString();
             edatebox.Text = gamegrid.Rows[e.RowIndex].Cells["GameDate"].FormattedValue.ToString();
             eeditorbox.Text = gamegrid.Rows[e.RowIndex].Cells["Editor"].FormattedValue.ToString();
+        }
+
+        private void editbutton_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
