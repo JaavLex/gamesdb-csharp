@@ -43,6 +43,12 @@ namespace games_db
             this.GameDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gamegrid = new System.Windows.Forms.DataGridView();
+            this.enamebox = new System.Windows.Forms.TextBox();
+            this.edatebox = new System.Windows.Forms.TextBox();
+            this.eplatformbox = new System.Windows.Forms.ComboBox();
+            this.etypebox = new System.Windows.Forms.ComboBox();
+            this.eeditorbox = new System.Windows.Forms.TextBox();
+            this.editbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gamegrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -157,13 +163,75 @@ namespace games_db
             this.gamegrid.TabIndex = 0;
             this.gamegrid.Text = "dataGridView1";
             this.gamegrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gamegrid_CellContentClick);
-            this.gamegrid.Columns["ID"].ValueType = typeof(int);
-            this.gamegrid.Columns["GameDate"].ValueType = typeof(DateTime);
+            // 
+            // enamebox
+            // 
+            this.enamebox.Location = new System.Drawing.Point(47, 221);
+            this.enamebox.Name = "enamebox";
+            this.enamebox.Size = new System.Drawing.Size(200, 23);
+            this.enamebox.TabIndex = 1;
+            // 
+            // edatebox
+            // 
+            this.edatebox.Location = new System.Drawing.Point(47, 308);
+            this.edatebox.Name = "edatebox";
+            this.edatebox.Size = new System.Drawing.Size(200, 23);
+            this.edatebox.TabIndex = 1;
+            // 
+            // eplatformbox
+            // 
+            this.eplatformbox.FormattingEnabled = true;
+            this.eplatformbox.Items.AddRange(new object[] {
+            "PC",
+            "Xbox",
+            "PS4",
+            "Nintendo Switch"});
+            this.eplatformbox.Location = new System.Drawing.Point(47, 250);
+            this.eplatformbox.Name = "eplatformbox";
+            this.eplatformbox.Size = new System.Drawing.Size(200, 23);
+            this.eplatformbox.TabIndex = 3;
+            // 
+            // etypebox
+            // 
+            this.etypebox.FormattingEnabled = true;
+            this.etypebox.Items.AddRange(new object[] {
+            "PC",
+            "Xbox",
+            "PS4",
+            "Nintendo Switch"});
+            this.etypebox.Location = new System.Drawing.Point(47, 279);
+            this.etypebox.Name = "etypebox";
+            this.etypebox.Size = new System.Drawing.Size(200, 23);
+            this.etypebox.TabIndex = 3;
+            // 
+            // eeditorbox
+            // 
+            this.eeditorbox.Location = new System.Drawing.Point(47, 337);
+            this.eeditorbox.Name = "eeditorbox";
+            this.eeditorbox.Size = new System.Drawing.Size(200, 23);
+            this.eeditorbox.TabIndex = 1;
+            // 
+            // editbutton
+            // 
+            this.editbutton.Location = new System.Drawing.Point(47, 366);
+            this.editbutton.Name = "editbutton";
+            this.editbutton.Size = new System.Drawing.Size(200, 23);
+            this.editbutton.TabIndex = 5;
+            this.editbutton.Text = "Edit";
+            this.editbutton.UseVisualStyleBackColor = true;
+            this.editbutton.Click += new System.EventHandler(this.addbutton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(918, 496);
+            this.Controls.Add(this.editbutton);
+            this.Controls.Add(this.eeditorbox);
+            this.Controls.Add(this.etypebox);
+            this.Controls.Add(this.eplatformbox);
+            this.Controls.Add(this.edatebox);
+            this.Controls.Add(this.enamebox);
             this.Controls.Add(this.addbutton);
             this.Controls.Add(this.typebox);
             this.Controls.Add(this.platformbox);
@@ -195,6 +263,12 @@ namespace games_db
         private System.Windows.Forms.DataGridViewTextBoxColumn Type;
         private System.Windows.Forms.DataGridViewTextBoxColumn GameDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Editor;
+        private System.Windows.Forms.TextBox enamebox;
+        private System.Windows.Forms.TextBox edatebox;
+        private System.Windows.Forms.ComboBox eplatformbox;
+        private System.Windows.Forms.ComboBox etypebox;
+        private System.Windows.Forms.TextBox eeditorbox;
+        private System.Windows.Forms.Button editbutton;
     }
 }
 
